@@ -1,41 +1,34 @@
-const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
 const iframe = document.getElementById("ytMusic");
 
-let isPlaying = true;
-
-// No button prank 😄
+// NO button prank 😄
 noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * (window.innerWidth - 100);
-  const y = Math.random() * (window.innerHeight - 100);
+  const x = Math.random() * (window.innerWidth - 120);
+  const y = Math.random() * (window.innerHeight - 120);
+
   noBtn.style.position = "absolute";
   noBtn.style.left = x + "px";
   noBtn.style.top = y + "px";
 });
 
-// Yes button action ❤️
+// YES button → MUSIC START ❤️
 yesBtn.addEventListener("click", () => {
+  iframe.src =
+    "https://www.youtube.com/embed/PSiJZ9K_x6s?autoplay=1&loop=1&playlist=PSiJZ9K_x6s";
+
   alert("I knew it 😍❤️ I love you so much!");
 });
-
-// Toggle music
-function toggleMusic() {
-  if (isPlaying) {
-    iframe.src = "";
-  } else {
-    iframe.src =
-      "https://www.youtube.com/embed/PSiJZ9K_x6s?autoplay=1&loop=1&playlist=PSiJZ9K_x6s";
-  }
-  isPlaying = !isPlaying;
-}
 
 // Floating hearts animation
 function createHeart() {
   const heart = document.createElement("div");
-  heart.classList.add("heart");
+  heart.className = "heart";
   heart.innerHTML = "❤️";
+
   heart.style.left = Math.random() * window.innerWidth + "px";
   heart.style.bottom = "0px";
+
   document.body.appendChild(heart);
 
   setTimeout(() => {
