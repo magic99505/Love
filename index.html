@@ -3,35 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>For My Love ❤️</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-  <h1 class="fade-in">Hey My Love ❤️</h1>
-  <p class="fade-in delay">I made this just for you 💌</p>
+  <div class="container">
+    <h1 class="fade-in">Hey My Love ❤️</h1>
+    <p class="fade-in delay">I made this just for you 💌</p>
 
-  <div class="buttons">
-    <button id="yesBtn">Yes 😍</button>
-    <button id="noBtn">No 🙈</button>
+    <div class="buttons">
+      <button id="yesBtn">Yes 😍</button>
+      <button id="noBtn">No 🙈</button>
+    </div>
   </div>
-</div>
 
-<!-- Music Button -->
-<div class="music-control">
-  <button onclick="toggleMusic()">🎵 Play / Pause</button>
-</div>
+  <!-- Hidden YouTube Player (NO autoplay here) -->
+  <iframe
+    id="ytMusic"
+    width="0"
+    height="0"
+    src="https://www.youtube.com/embed/PSiJZ9K_x6s?loop=1&playlist=PSiJZ9K_x6s"
+    frameborder="0"
+    allow="autoplay">
+  </iframe>
 
-<!-- Hidden YouTube Player (Cold - NEFFEX) -->
-<iframe
-  id="ytMusic"
-  width="0"
-  height="0"
-  src="https://www.youtube.com/embed/PSiJZ9K_x6s?autoplay=1&loop=1&playlist=PSiJZ9K_x6s"
-  frameborder="0"
-  allow="autoplay">
-</iframe>
-
-<script src="script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
